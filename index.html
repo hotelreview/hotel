@@ -3,37 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BO SUSHI – Залишити відгук</title>
+  <title>BO SUSHI</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <h1>BO SUSHI</h1>
-      <p>Будь ласка, оцініть ваш досвід</p>
-      <div class="stars" id="stars">
-        <span data-value="1">★</span>
-        <span data-value="2">★</span>
-        <span data-value="3">★</span>
-        <span data-value="4">★</span>
-        <span data-value="5">★</span>
-      </div>
-
-      <form id="feedback-form" style="display:none;">
-        <label for="reason">Що вам не сподобалось?</label>
-        <textarea name="reason" id="reason" required placeholder="Ваш коментар..."></textarea>
-
-        <label for="name">Ваше ім'я</label>
-        <input type="text" id="name" name="name" required placeholder="Ім’я">
-
-        <label for="email">Email або телефон</label>
-        <input type="text" id="email" name="email" required placeholder="Контактні дані">
-
-        <button type="submit">Відправити</button>
-      </form>
+  <div class="background"></div>
+  <div class="review-card">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1>BO SUSHI</h1>
+    <p>Оцініть наш сервіс</p>
+    <div class="stars" id="stars">
+      <span data-value="1">&#9733;</span>
+      <span data-value="2">&#9733;</span>
+      <span data-value="3">&#9733;</span>
+      <span data-value="4">&#9733;</span>
+      <span data-value="5">&#9733;</span>
     </div>
+    <form id="feedbackForm" style="display:none;">
+      <label>Що вас не влаштувало?</label>
+      <textarea name="problem" required placeholder="Розкажіть детальніше про вашу проблему..."></textarea>
+      <label>Ваше ім'я</label>
+      <input type="text" name="name" required placeholder="Як до вас звертатися?" />
+      <label>Email або телефон</label>
+      <input type="text" name="contact" required placeholder="Як з вами зв’язатися?" />
+      <button type="submit">Відправити відгук</button>
+    </form>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>

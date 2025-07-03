@@ -1,35 +1,29 @@
-const stars = document.querySelectorAll(".stars span");
-const form = document.getElementById("feedback-form");
-let selectedRating = 0;
+document.addEventListener('DOMContentLoaded', function () {
+  const stars = document.querySelectorAll('.stars span');
+  const form = document.getElementById('feedbackForm');
 
-stars.forEach(star => {
-  star.addEventListener("click", () => {
-    selectedRating = parseInt(star.dataset.value);
-    highlightStars(selectedRating);
-
-    if (selectedRating <= 3) {
-      form.style.display = "flex";
-    } else {
-      window.location.href = "https://maps.app.goo.gl/WWB4ZqHCcaKKPsJa8";
-    }
-  });
-});
-
-function highlightStars(rating) {
   stars.forEach(star => {
-    star.classList.remove("selected");
-    if (parseInt(star.dataset.value) <= rating) {
-      star.classList.add("selected");
-    }
+    star.addEventListener('click', () => {
+      const rating = parseInt(star.getAttribute('data-value'));
+
+      stars.forEach(s => s.classList.remove('selected'));
+      for (let i = 0; i < rating; i++) {
+        stars[i].classList.add('selected');
+      }
+
+      if (rating <= 3) {
+        form.style.display = 'block';
+      } else {
+        window.location.href = 'https://maps.app.goo.gl/WWB4ZqHCcaKKPsJa8';
+      }
+    });
   });
-}
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const reason = document.getElementById("reason").value;
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-
-  const body = `Причина: ${reason}%0AІм'я: ${name}%0AКонтакт: ${email}`;
-  window.location.href = `mailto:tkebuchava16061991@gmail.com?subject=Негативний відгук (1-3 зірки)&body=${body}`;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Дякуємо за ваш відгук!');
+    form.reset();
+    form.style.display = 'none';
+    stars.forEach(s => s.classList.remove('selected'));
+  });
 });
