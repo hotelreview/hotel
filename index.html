@@ -1,28 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BO SUSHI — Залиште відгук</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BO SUSHI – Відгук</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <img src="logo.png" alt="BO SUSHI" class="logo"/>
-    <h1>Залиште відгук</h1>
+    <h1>BO SUSHI</h1>
+    <p>Оцініть наш сервіс</p>
     <div class="stars" id="stars">
-      <span class="star" data-value="1">★</span>
-      <span class="star" data-value="2">★</span>
-      <span class="star" data-value="3">★</span>
-      <span class="star" data-value="4">★</span>
-      <span class="star" data-value="5">★</span>
+      <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
     </div>
-    <form id="feedbackForm" class="feedback-form" method="POST">
-      <textarea name="reason" placeholder="Що не влаштувало?" required></textarea>
-      <input type="text" name="name" placeholder="Ваше ім'я" required />
-      <input type="email" name="email" placeholder="Email або телефон" required />
-      <button type="submit">Надіслати</button>
+    <form id="feedbackForm" style="display:none;">
+      <label>Що вас не влаштувало? *</label>
+      <textarea name="reason" placeholder="Розкажіть детальніше про вашу проблему..." required></textarea>
+      <label>Ваше ім’я *</label>
+      <input type="text" name="name" placeholder="Як до вас звертатися?" required />
+      <label>Email або телефон *</label>
+      <input type="text" name="contact" placeholder="Як з вами зв’язатися?" required />
+      <button type="submit">Відправити відгук</button>
     </form>
   </div>
   <script src="script.js"></script>
