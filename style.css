@@ -1,75 +1,71 @@
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.background {
-  background: url('bg.jpg') center center / cover no-repeat;
-  filter: blur(6px);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.5;
-}
-
-.review-card {
-  max-width: 380px;
+.container {
+  max-width: 500px;
   margin: 50px auto;
-  padding: 25px;
-  background: rgba(255,255,255,0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.logo {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 15px;
+h1 {
+  margin-bottom: 20px;
 }
 
-.stars span {
-  font-size: 2rem;
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.star {
+  font-size: 40px;
   cursor: pointer;
   color: #ccc;
+  transition: color 0.2s;
 }
 
-.stars span.selected {
+.star.selected,
+.star:hover,
+.star:hover ~ .star {
   color: gold;
 }
 
-form {
+.feedback-form {
+  display: none;
   margin-top: 20px;
-  text-align: left;
 }
 
-form label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
-
-form input, form textarea {
+input, textarea {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
   border: 1px solid #ccc;
 }
 
-form button {
-  width: 100%;
-  padding: 10px;
-  background: #007bff;
-  color: white;
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  background: #ff9800;
+  color: white;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #e68900;
 }
