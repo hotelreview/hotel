@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BO SUSHI – Відгук</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BO SUSHI – Залишити відгук</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <div class="card">
-      <h2>BO SUSHI</h2>
-      <p>Оцініть наш сервіс</p>
+      <h1>BO SUSHI</h1>
+      <p>Будь ласка, оцініть ваш досвід</p>
       <div class="stars" id="stars">
         <span data-value="1">★</span>
         <span data-value="2">★</span>
@@ -19,17 +19,17 @@
         <span data-value="5">★</span>
       </div>
 
-      <form id="feedback-form" style="display: none;">
-        <label>Що вас не влаштувало? *</label>
-        <textarea name="problem" required placeholder="Розкажіть детальніше про вашу проблему..."></textarea>
+      <form id="feedback-form" style="display:none;">
+        <label for="reason">Що вам не сподобалось?</label>
+        <textarea name="reason" id="reason" required placeholder="Ваш коментар..."></textarea>
 
-        <label>Ваше ім'я *</label>
-        <input type="text" name="name" required placeholder="Як до вас звертатися?">
+        <label for="name">Ваше ім'я</label>
+        <input type="text" id="name" name="name" required placeholder="Ім'я">
 
-        <label>Email або телефон *</label>
-        <input type="text" name="contact" required placeholder="Як з вами зв'язатися?">
+        <label for="email">Email або телефон</label>
+        <input type="text" id="email" name="email" required placeholder="Контакт">
 
-        <button type="submit">Відправити відгук</button>
+        <button type="submit">Відправити</button>
       </form>
     </div>
   </div>
